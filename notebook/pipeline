@@ -1,0 +1,11 @@
+RI data unpack
+   ↓
+Geometry / Volume
+   ↓
+iso2mesh (tetgen / cgalmesh)
+   ↓
+nodes + elements + region labels
+   ↓
+MCX (.json or MATLAB struct)
+   ↓
+Photon Monte Carlo simulation
