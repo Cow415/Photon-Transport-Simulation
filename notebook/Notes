@@ -7,11 +7,20 @@ iso2mesh (tetgen / cgalmesh)
    ↓
 nodes + elements + region labels
    ↓
-MCX (.json or MATLAB struct)
+MCX (MATLAB struct) & Redbird(MATLAB struct)
    ↓
 Photon Monte Carlo simulation
 
+Redbird v MCX
+   MCX: high frequency noise, accurate near source
+   Redbird: Smooth, diffusive, but fails near source
 
+Recommended steps:
+   Voxelize iso2mesh geometry → MCX
+   Project MCX fluence onto FEM nodes
+   Quantitative error analysis
+   Frequency-domain & time-domain
+   Inverse reconstruction using Redbird
 
 =========== MatLab ==========
 in command window:
