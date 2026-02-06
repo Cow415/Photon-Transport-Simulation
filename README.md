@@ -5,6 +5,7 @@ Repository---Photon Distribution Simulation For OBM Sample Lumination
     """
 
 !!! This repo. is cross accessed between VSCode and MatLab !!!
+    Workflow are done differently, all image processing in Python, and simulation is in MatLab
 
 Composite storage for piping sample tiff into MCX. 
 
