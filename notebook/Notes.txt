@@ -1,5 +1,5 @@
-Initial Pipeline:
-RI data unpack
+Pipeline:
+RI data unpack (Fiji) -- Deposited at data/raw/
    ↓
 Geometry / Volume or cross-section
    ↓
@@ -21,6 +21,11 @@ Recommended steps:
    Quantitative error analysis
    Frequency-domain & time-domain
    Inverse reconstruction using Redbird
+
+=========== Processing
+Extraxt
+
+
 
 =========== MatLab ==========
 in command window:
