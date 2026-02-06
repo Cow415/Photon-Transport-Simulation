@@ -1,8 +1,19 @@
 Pipeline:
-RI data unpack (Fiji) -- Deposited at data/raw/
+RI data unpack (Fiji)
+   data/raw/ --> data/processed/
    ↓
-Geometry / Volume or cross-section
+Geometry Extraction
+   Filter & Obtain RI of cell geometry as a matrix
+      |  tiff_processing.ipynb                           !To be worked on!
+      V  cell_ri_extract.ipynb
+   data/processed --> data/extracted ri
    ↓
+Preparing Body
+   Adjust body position & pad gel/air RI into the Filter
+      |  geometry_forming.ipynb
+      V  
+
+      ================================in progress
 iso2mesh (tetgen / cgalmesh)
    ↓
 nodes + elements + region labels
@@ -10,6 +21,12 @@ nodes + elements + region labels
 MCX (MATLAB struct) & Redbird(MATLAB struct)
    ↓
 Photon Monte Carlo simulation
+
+===========================
+Others Things: 
+Sample size: 35 x 35x 35 µm
+
+
 
 Redbird v MCX
    MCX: high frequency noise, accurate near source
@@ -21,11 +38,6 @@ Recommended steps:
    Quantitative error analysis
    Frequency-domain & time-domain
    Inverse reconstruction using Redbird
-
-=========== Processing
-Extraxt
-
-
 
 =========== MatLab ==========
 in command window:
