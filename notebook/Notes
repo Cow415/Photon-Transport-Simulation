@@ -1,7 +1,7 @@
 Initial Pipeline:
 RI data unpack
    ↓
-Geometry / Volume
+Geometry / Volume or cross-section
    ↓
 iso2mesh (tetgen / cgalmesh)
    ↓
