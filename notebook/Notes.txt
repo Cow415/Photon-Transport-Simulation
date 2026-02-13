@@ -4,8 +4,8 @@ RI data unpack (Fiji)
    ↓
 Geometry Extraction
    Filter & Obtain RI of cell geometry as a matrix
-      |  tiff_processing.ipynb                           !To be worked on!
-      V  cell_ri_extract.ipynb
+      |   cell_ri_extract.ipynb                   !Filtering - To be worked on!
+      V  
    data/processed --> data/extracted ri
    ↓
 Preparing Body
@@ -25,8 +25,6 @@ Photon Monte Carlo simulation
 ===========================
 Others Things: 
 Sample size: 35 x 35x 35 µm
-
-
 
 Redbird v MCX
    MCX: high frequency noise, accurate near source
