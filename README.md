@@ -15,4 +15,4 @@ Includes Scripts For:
     3. Meshing(Matab).
     4. Simulation(MatLab).
 
-QPI provides RI by pixels throughout the layers, this repositoty walks through the workflow that process the TIFF matrix into meshable objects, which will then be used to simulation the photon distribution. 
+QPI provides RI by pixels throughout the layers, this repository walks through the workflow that process the 3D TIFF into matrix that can be mixed with meshing, which will then be used to simulation the photon distribution. 
