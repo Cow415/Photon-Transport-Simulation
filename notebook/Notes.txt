@@ -4,15 +4,14 @@ RI data unpack (Fiji)
    ↓
 Geometry Extraction
    Filter & Obtain RI of cell geometry as a matrix
-      |   cell_ri_extract.ipynb                   !Filtering - To be worked on!
+      |   cell_ri_extract.ipynb      
       V  
    data/processed --> data/extracted ri
    ↓
 Preparing Body
    Adjust body position & pad gel/air RI into the Filter
-      |  geometry_forming.ipynb
+      |  mesh_labels.ipynb
       V  
-
       ================================in progress
 iso2mesh (tetgen / cgalmesh)
    ↓
