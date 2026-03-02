@@ -4,9 +4,3 @@ Quick Notes:
         Image - Reslice - From Right
         Duplicate(Single Image) - Save as
     2D data files are NOT Useful.
-
-Finding pericytes:
-    |
-    |
-    |
-    |

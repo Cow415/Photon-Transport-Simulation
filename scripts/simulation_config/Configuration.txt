@@ -1,0 +1,110 @@
+Parameters
+---
+Each tissue/material needs four optical coefficients:
+        [ μₐ , μₛ , g , n ]
+Symbol	Meaning	                    Units
+μₐ	    absorption coefficient       mm⁻¹
+μₛ	    scattering coefficient       mm⁻¹
+g	    anisotropy factor	        unitless
+n	    refractive index	        unitless
+
+Parameter	    Physical Origin
+𝑛	             Polarizability
+𝜇𝑎	          Electronic/vibrational transitions
+𝜇𝑠              Structural heterogeneity
+𝑔               Size parameter 2𝜋𝑟/𝜆
+
+Fluids:
+Medium	μₐ	    μₛ	    g	    n
+Water	0.002	0.01	0.9	    1.33
+Urine	0.01	0.2	    0.9	    1.34
+CSF	    0.005	0.05	0.9	    1.34
+
+Cells:
+Medium	μₐ	    μₛ	    g	    n
+RBC	    0.2	    25	    0.98	1.40
+WBC	    0.05	12	    0.95	1.38
+
+To calculate the parameters, the imaginary refractive index is required.
+
+Tomocube's holotomography (HT) technology and TomoStudio X software are designed to process complex 3D Refractive Index (RI) 
+tomograms, enabling label-free, quantitative, and 3D visualization of live cells and tissues.
+
+The real refractive index measures how much a material slows down and bends light (phase velocity). 
+The complex refractive index combines this with an imaginary component (the extinction coefficient), which quantifies 
+how much light is absorbed or attenuated by the material.
+
+=============================
+Temporary for configuration set-up
+        λ =532 nm
+
+Medium	            μₐ (mm⁻¹)   μₛ (mm⁻¹)	g	    n
+Water	            0.002	    ~0	        0.9	    1.333
+RBC (whole blood)	1.5	        25	        0.98	1.40
+RBC (dilute)	    0.1	        5	        0.97	1.40
+Agarose (1%)	    0.005	    0.5	        0.9	    1.35
+"""
+cfg.prop = [
+  0      0      1.0    1.0;      % air
+  0.002  0      0.9    1.333;    % water
+  0.1    5      0.97   1.40;     % RBC
+];
+"""
+
+====================
+Source Parameters (Critical)
+Defines where photons start and how they launch.
+
+Required:
+Parameter	    Meaning
+srcpos	        source position [x y z]
+srcdir	        direction vector
+srctype	        beam type
+
+Common source types:
+srctype	    Description
+'pencil'	collimated laser
+'disk'	    circular beam
+'cone'	    diverging beam
+'gaussian'	Gaussian beam
+
+"""cfg.srctype = 'gaussian';
+cfg.srcpos = [100 100 1];
+cfg.srcdir = [0 0 1];
+cfg.srcparam1 = [0.2 0 0 0];   % beam waist in mm
+"""
+If laser diameter = 1 mm:
+
+𝑤0 = 0.5 mm
+So:
+    cfg.srcparam1 = [0.5 0 0 0];
+=====================
+Photon Number & Simulation Control
+Required:
+Parameter	            Meaning
+nphoton	                number of photons
+tstart, tend, tstep	    time-gating
+
+Application	    nphoton
+Fast testing	1e5
+Stable fluence	1e7
+High precision	1e8 – 1e9
+
+Example:
+cfg.nphoton = 1e7;
+====================
+Boundary Conditions - Controls reflections/refractions:
+"""
+cfg.isreflect = 1;   % Fresnel reflections ON
+cfg.isrefractive = 1;
+"""
+====================
+Output Control:
+"""
+cfg.outputtype = 'fluence';
+"""
+
+Output	    Meaning
+'fluence'	deposited energy
+'flux'	    photon flow
+'energy'	absorption
