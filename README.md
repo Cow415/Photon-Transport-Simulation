@@ -1,11 +1,10 @@
-Repository---Photon Distribution Simulation For OBM Sample Lumination
-    """
-    This repository contain all work done to simulate photon distribution in a given sample using 
-    Monte Carlo Method, and aim to illustrate photon activity within the sample during imaging.
-    """
+# Photon Distribution Simulation For OBM Sample Lumination
+
+This repository contain all work done to simulate photon distribution in a given sample using Monte Carlo Method, and aim to illustrate photon activity within the sample during imaging.
 
 !!! This repo. is cross accessed between VSCode and MatLab !!!
-    Workflow are done differently, all image processing in Python, and simulation is in MatLab
+
+Workflow are done differently, all image processing in Python, and simulation is in MatLab
 
 Composite storage for piping sample tiff into MCX. 
 

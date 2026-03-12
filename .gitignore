@@ -1,11 +1,16 @@
 # Python
 __pycache__/
+.qodo/
+.venv/
+venv/
 
 # Jupyter
 .ipynb_checkpoints/
 
 # Ignore a specific folder
 data/
+output/
+
 
 # Ignore all TIFF images
 *.tif

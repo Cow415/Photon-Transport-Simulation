@@ -9,7 +9,7 @@ Geometry Extraction
    data/processed --> data/extracted ri
    ↓
 Preparing Body
-   Adjust body position & pad gel/air RI into the Filter
+   Adjust body position if needed & pad gel/air RI into the Filter
       |  mesh_labels.ipynb
       V  
       ================================in progress
@@ -17,7 +17,7 @@ iso2mesh (tetgen / cgalmesh)
    ↓
 nodes + elements + region labels
    ↓
-MCX (MATLAB struct) & Redbird(MATLAB struct)
+MCX Configuration and Run
    ↓
 Photon Monte Carlo simulation
 

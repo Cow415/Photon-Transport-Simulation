@@ -1,0 +1,28 @@
+2D phantom
+   ↓
+extrude → 3D volume
+   ↓
+pyiso2mesh → tetrahedral mesh
+   ↓
+MCX config
+   ↓
+MCX simulation
+   ↓
+fluence / photon data
+
+Architecture:
+project/
+│
+├── environment.yml
+├── data/
+│   └── phantom.npy           # your 2D matrix (3 labels)
+│
+├── mesh/
+│   └── generate_mesh.py      # pyiso2mesh pipeline
+│
+├── simulation/
+│   └── run_mcx.py            # MCX configuration + run
+│
+└── output/
+    ├── mesh/
+    └── mcx/

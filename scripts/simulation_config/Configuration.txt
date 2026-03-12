@@ -1,5 +1,6 @@
-Iso2Mesh Version 1.9.8
-
+0 = background
+1 = tissue Cell
+2 = tissue Gel
 =================
 Parameters
 ---
