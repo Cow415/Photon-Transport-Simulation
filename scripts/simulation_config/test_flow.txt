@@ -17,10 +17,8 @@ project/
 ├── data/
 │   └── phantom.npy           # your 2D matrix (3 labels)
 │
-├── mesh/
+├── mesh/simulation
 │   └── generate_mesh.py      # pyiso2mesh pipeline
-│
-├── simulation/
 │   └── run_mcx.py            # MCX configuration + run
 │
 └── output/

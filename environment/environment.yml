@@ -10,7 +10,8 @@ dependencies:
   - scikit-image
   - h5py
   - pip
+  - tetgen
 
   - pip:
-      - pyiso2mesh
+      - iso2mesh
       - pmcx
