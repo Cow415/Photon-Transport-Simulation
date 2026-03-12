@@ -1,4 +1,4 @@
-name: .venv (3.13.12)
+name: mcx_pipeline
 channels:
   - conda-forge
 

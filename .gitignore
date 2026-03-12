@@ -1,8 +1,8 @@
 # Python
 __pycache__/
 .qodo/
-.venv/
-venv/
+.mcx-env/
+mcx-env/
 
 # Jupyter
 .ipynb_checkpoints/

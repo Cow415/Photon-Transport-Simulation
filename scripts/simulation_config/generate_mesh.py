@@ -1,12 +1,12 @@
 import numpy as np
-from pyiso2mesh import vol2mesh
+from iso2mesh import vol2mesh
 import os
 
 # -------------------------
 # Parameters
 # -------------------------
 
-INPUT_FILE = "../data/phantom.npy"
+INPUT_FILE = "../scripts/simulation_configuration/phantom.npy"
 OUTPUT_DIR = "../output/mesh"
 THICKNESS = 20   # number of layers
 

@@ -1,12 +1,7 @@
 Vs Python:
-    
 - Numpy
 - Tiffile
 - Pillow
 
-- Meshings Scripts for iso2mesh
-
-MatLab: 
-- iso2mesh
-- MCX
-- Redbird
+pip library:
+    
