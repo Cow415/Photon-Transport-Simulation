@@ -23,7 +23,7 @@ Photon Monte Carlo simulation
 
 ===========================
 Others Things: 
-Sample size: 35 x 35x 35 µm
+Sample size: 35 x 35 x 35 µm
 
 Redbird v MCX
    MCX: high frequency noise, accurate near source

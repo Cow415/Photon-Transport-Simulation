@@ -1,3 +1,12 @@
+# Python
+__pycache__/
 
+# Jupyter
+.ipynb_checkpoints/
 
+# Ignore a specific folder
+data/
 
+# Ignore all TIFF images
+*.tif
+*.tiff
