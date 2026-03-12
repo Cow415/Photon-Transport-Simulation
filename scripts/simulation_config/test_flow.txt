@@ -2,11 +2,11 @@
    ↓
 extrude → 3D volume
    ↓
-pyiso2mesh → tetrahedral mesh
+pyiso2mesh → tetrahedral mesh(Not required for 2D padding, though lose accuracy in propagation)
    ↓
-MCX config
+MCX config(Must have NVIDIA Driver -> I hate nvidia i hope they go out of business)
    ↓
-MCX simulation
+MCX simulation()
    ↓
 fluence / photon data
 
