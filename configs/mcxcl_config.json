@@ -1,0 +1,55 @@
+{
+    "Session": {
+        "ID": "test_sim"
+    },
+    "Domain": {
+        "Dim": [
+            4,
+            5,
+            40
+        ],
+        "Media": [
+            [
+                0,
+                0,
+                1,
+                1
+            ],
+            [
+                0.01,
+                10,
+                0.9,
+                1.37
+            ],
+            [
+                0.02,
+                15,
+                0.9,
+                1.4
+            ]
+        ],
+        "OriginType": 1
+    },
+    "Optode": {
+        "Source": {
+            "Pos": [
+                2,
+                2,
+                0
+            ],
+            "Dir": [
+                0,
+                0,
+                1
+            ],
+            "Type": "pencil"
+        }
+    },
+    "Forward": {
+        "PhotonNum": 1000000,
+        "T0": 0,
+        "T1": 5e-09,
+        "Dt": 5e-10
+    },
+    "VolumeFile": "/Users/caoze/Documents/GitHub/Photon-Transport-Simulation/data/phantom/phantom.bin"
+}

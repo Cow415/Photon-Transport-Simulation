@@ -29,15 +29,12 @@ Redbird v MCX
    MCX: high frequency noise, accurate near source
    Redbird: Smooth, diffusive, but fails near source
 
+LED Sourse Configuration:
+   1 million
+
 Recommended steps:
    Voxelize iso2mesh geometry → MCX
    Project MCX fluence onto FEM nodes
    Quantitative error analysis
    Frequency-domain & time-domain
    Inverse reconstruction using Redbird
-
-=========== MatLab ==========
-in command window:
-    accessing script require addpath('') command
-
-    prefixing "!" before command to run bash instead of matlab

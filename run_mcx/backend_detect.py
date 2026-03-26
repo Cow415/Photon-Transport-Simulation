@@ -1,4 +1,5 @@
-# This script checks for the presence of iso2mesh backend executables in the system PATH.
+"""This script checks for the presence of iso2mesh backend executables in the system PATH."""
+
 import shutil
 import sys
 
