@@ -14,4 +14,4 @@ Includes Scripts For:
 
 TIFF exports of real samples from the QPI provides RI by pixels throughout the layers, this repository walks through a rudimentary workflow that takes a desired crossesctional slices of 3D TIFF into matrix, pads the matrix, and then injected with a desired light source model, to simulate and display the photon distribution using the flux, and demonstrate how it varies with changes to medium geometry and properties.
 
-Media involved includes, air, red blood cell, gel, and stained pericytes; and properties involved are absorption coefficient, scattering coefficient, anistropy factor and refractive index.
+Media involved includes, air, red blood cell, gel, and stained pericytes; and properties involved are absorption coefficient, scattering coefficient, anistropy factor and refractive index.0

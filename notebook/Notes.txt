@@ -11,7 +11,7 @@ Geometry Extraction
    ↓
 Preparing Body
    Adjust body position if needed & pad gel/air RI into the Filter
-      |  mesh_labels.ipynb
+      |  
       V  
       ================================ complete mesh labels with RI & can be classified with labels
 iso2mesh (tetgen / cgalmesh) || Optional

@@ -43,7 +43,7 @@ Possibly enhanced or reduced intensity zones
 
 * MCX outputs different concepts:
 
-Flux → directional energy flow (what you have)
+Flux → directional energy flow (this simulation)
 Fluence → total accumulated energy regardless of direction
 
 Flux = better for time-resolved transport
