@@ -4,7 +4,8 @@ RI data unpack (Fiji)
    ↓
 Geometry Extraction
    Filter & Obtain RI of cell geometry as a matrix
-      |   cell_ri_extract.ipynb      
+      |   cell_ri_extract.ipynb
+      |   peri_ri_extract.ipynb      
       V  
    data/processed --> data/extracted ri
    ↓
@@ -13,13 +14,13 @@ Preparing Body
       |  mesh_labels.ipynb
       V  
       ================================ complete mesh labels with RI & can be classified with labels
-iso2mesh (tetgen / cgalmesh)
+iso2mesh (tetgen / cgalmesh) || Optional
    ↓
 nodes + elements + region labels
    ↓
-MCX Configuration and Run
+MCX Configuration and Run || Runs Pylib of pmcxcl for AMD and Python based image processing
    ↓
-Photon Monte Carlo simulation
+Photon Monte Carlo simulation || Flux Mapping as a 3D Matrix with defined time variation
 
 ===========================
 Others Things: 

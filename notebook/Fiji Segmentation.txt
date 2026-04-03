@@ -4,3 +4,9 @@ Quick Notes:
         Image - Reslice - From Right
         Duplicate(Single Image) - Save as
     2D data files are NOT Useful.
+
+    For Sample w pericyte:
+        Auto adjust contrast and saturation for identifying pericyte
+            - Odd dots.
+
+        Identify the desired slice, and reslice from the un adjusted version

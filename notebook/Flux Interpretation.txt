@@ -1,0 +1,50 @@
+Flux: time-resolved measure of photon energy flow through space
+    Flux ~ Photon energy crossing a unit area per unit time
+
+    SImulating disrete photon with weight -> record number of photon passing through the voxel
+
+Flux is a 4D data set of flux(x, y, z,) over time steps of the
+    At time step = __ index, with locations of photons and how much energy is moving.
+
+Flux vlaue represents amount of light energy passing through the voxel at given time:
+    High value => Many photon reached loation or photons retains high weight(low absorption)
+    Low value => Few photons reaching / photon scattering and absorbtion
+
+    Treat as illumination map in the sample -> 3D light distribution, "where light exist"
+
+Equation Factors: 
+🔹 Absorption (μa)
+Reduces photon weight
+Causes flux to decay with depth
+🔹 Scattering (μs)
+Redirects photons
+Spreads flux spatially
+🔹 Anisotropy (g)
+Controls forward vs random scattering
+Higher g → deeper penetration before spreading
+
+Media Variation: 
+Case 1: Air (low scattering, low absorption)
+Light travels straight
+Flux is narrow and directional
+Sharp beam-like pattern
+
+Case 2: Gel / tissue (moderate scattering)
+Light spreads out
+Flux becomes diffuse
+Wider, smoother distribution
+
+Case 3: Cell embedded in gel
+Refractive/optical mismatch
+You’ll see:
+Shadowing
+Localized flux changes
+Possibly enhanced or reduced intensity zones
+
+* MCX outputs different concepts:
+
+Flux → directional energy flow (what you have)
+Fluence → total accumulated energy regardless of direction
+
+Flux = better for time-resolved transport
+Fluence = better for energy deposition / imaging

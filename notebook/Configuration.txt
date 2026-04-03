@@ -8,7 +8,7 @@ Each tissue/material needs four optical coefficients:
         [ μₐ , μₛ , g , n ]
 Symbol	Meaning	                    Units
 μₐ	    absorption coefficient       mm⁻¹
-μₛ	    scattering coefficient       mm⁻¹
+μₛ	     scattering coefficient       mm⁻¹
 g	    anisotropy factor	        unitless
 n	    refractive index	        unitless
 
