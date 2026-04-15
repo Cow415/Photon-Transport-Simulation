@@ -1,12 +1,11 @@
 Quick Notes:
-    Only use 3D TIFF
-    Reslice from side, save ideal side profile to inflate and mesh.
+    Download 3D TIFF files
+    Reslice from side, save ideal side profile to inflate and simulate.
         Image - Reslice - From Right
         Duplicate(Single Image) - Save as
-    2D data files are NOT Useful.
-
+    
     For Sample w pericyte:
         Auto adjust contrast and saturation for identifying pericyte
             - Odd dots.
 
-        Identify the desired slice, and reslice from the un adjusted version
+        Identify the desired slice, and reslice from a separate unadjusted version(original TIFF)

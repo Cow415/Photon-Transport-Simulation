@@ -1,7 +1,7 @@
 Flux: time-resolved measure of photon energy flow through space
     Flux ~ Photon energy crossing a unit area per unit time
 
-    SImulating disrete photon with weight -> record number of photon passing through the voxel
+    Simulating disrete photon with weight -> record number of photon passing through the voxel
 
 Flux is a 4D data set of flux(x, y, z,) over time steps of the
     At time step = __ index, with locations of photons and how much energy is moving.

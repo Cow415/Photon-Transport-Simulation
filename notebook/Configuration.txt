@@ -1,22 +1,17 @@
 0 = background
-1 = tissue Cell
-2 = tissue Gel
+1 = tissue gel
+2 = tissue cell
+3 = parasite
 =================
 Parameters
 ---
 Each tissue/material needs four optical coefficients:
         [ μₐ , μₛ , g , n ]
-Symbol	Meaning	                    Units
-μₐ	    absorption coefficient       mm⁻¹
-μₛ	     scattering coefficient       mm⁻¹
-g	    anisotropy factor	        unitless
-n	    refractive index	        unitless
-
-Parameter	    Physical Origin
-𝑛	             Polarizability
-𝜇𝑎	              Electronic/vibrational transitions
-𝜇𝑠                  Structural heterogeneity
-𝑔                   Size parameter 2𝜋𝑟/𝜆
+Symbol	        Meaning	                 Units                  Physical Origin
+μₐ	    absorption coefficient       mm⁻¹                   Polarizability
+μₛ	     scattering coefficient       mm⁻¹                  Electronic/Vibrational transitions
+g	    anisotropy factor	        unitless                Structural heterogeneity
+n	    refractive index	        unitless                Size Parameter 2𝜋𝑟/𝜆
 
 Fluids:
 Medium	        μₐ	μₛ	 g	n
@@ -29,10 +24,9 @@ Medium	        μₐ	    μₛ	    g	        n
 RBC	        0.2	    25	    0.98	1.40
 WBC	        0.05	    12	    0.95	1.38
 
-To calculate the parameters, the imaginary refractive index is required.
+To manually calculate the parameters, the imaginary refractive index is required.
 
-Tomocube's holotomography (HT) technology and TomoStudio X software are designed to process complex 3D Refractive Index (RI) 
-tomograms, enabling label-free, quantitative, and 3D visualization of live cells and tissues.
+Tomocube's holotomography (HT) technology and TomoStudio X software are designed to process complex 3D Refractive Index (RI) - Only with the upgraded sensors.
 
 The real refractive index measures how much a material slows down and bends light (phase velocity). 
 The complex refractive index combines this with an imaginary component (the extinction coefficient), which quantifies 
@@ -47,6 +41,8 @@ Water	            0.002	~0	        0.9	    1.333
 RBC (whole blood)   1.5	        25	        0.98	    1.40
 RBC (dilute)	    0.1	        5	        0.97	    1.40
 Agarose (1%)	    0.005	0.5	        0.9	    1.35
+
+Example configuration
 """
 cfg.prop = [
   0      0      1.0    1.0;      % air
@@ -55,6 +51,7 @@ cfg.prop = [
 ];
 """
 
+OTHER TIPS:
 ====================
 Source Parameters (Critical)
 Defines where photons start and how they launch.

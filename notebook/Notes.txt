@@ -1,41 +1,48 @@
 Pipeline:
-RI data unpack (Fiji)
-   data/raw/ --> data/processed/
-   ↓
+RI data unpack (Fiji) --> data/raw/
+      |
+      V
 Geometry Extraction
    Filter & Obtain RI of cell geometry as a matrix
       |   cell_ri_extract.ipynb
-      |   peri_ri_extract.ipynb      
+      |   para_ri_extract.ipynb      
       V  
-   data/processed --> data/extracted ri
+   data/processed --> data/extracted ri matrix
    ↓
 Preparing Body
-   Adjust body position if needed & pad gel/air RI into the Filter
+   Adjust body position if needed & pad gel/air RI into the Filter, crop to square frame
       |  
       V  
-      ================================ complete mesh labels with RI & can be classified with labels
-iso2mesh (tetgen / cgalmesh) || Optional
-   ↓
-nodes + elements + region labels
-   ↓
-MCX Configuration and Run || Runs Pylib of pmcxcl for AMD and Python based image processing
-   ↓
-Photon Monte Carlo simulation || Flux Mapping as a 3D Matrix with defined time variation
+Photon Monte Carlo simulation(By pmcxcl)|| Flux Mapping as a 3D Matrix with defined time variation
 
-===========================
-Others Things: 
-Sample size: 35 x 35 x 35 µm
+Full Steps:
+   Extraction: 
+      Low-pass Fourier
+      Median
+      Guassian Blur
+      Null Neighbor Trimming
+      Multi-Otsu Region identifying
+      Apply Region Mask to Original Matrix to Extract Cell RI
 
-Redbird v MCX
-   MCX: high frequency noise, accurate near source
-   Redbird: Smooth, diffusive, but fails near source
+   Preparation:
+      Crop desired frame as a square
+      Pad gel region below cell that is null space, assign all else as air
+      Assign label to parasitic region of the cell
+      pad into "Swiss-Roll" by 100 pixel layers
 
-LED Sourse Configuration:
-   1 million
+   Configuration:
+      1000000 photons 
+      set unit to 1/1000 of milimeter -> Micron
 
-Recommended steps:
-   Voxelize iso2mesh geometry → MCX
-   Project MCX fluence onto FEM nodes
-   Quantitative error analysis
-   Frequency-domain & time-domain
-   Inverse reconstruction using Redbird
+      10 picosecond frames
+      each frame 1 picoseconds apart
+
+      Light source positioned on gel by the edge of the frame
+      Angled 45 degree to horizontal, aimed into the gel medium
+      Beam configuration of light source
+
+      Media Labels:
+         Air = 1
+         Gel = 2
+         Cell = 3
+         Parasitic Region = 4
